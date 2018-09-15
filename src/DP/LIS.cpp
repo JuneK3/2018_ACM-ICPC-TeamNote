@@ -1,11 +1,9 @@
 // LIS : 최장증가수열
 // O(N^2)
 // O(NlogN)으로 교체가능(http://mygumi.tistory.com/303 참고)
-
 // 백준 11053, 11055 참고
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 int main()
 {
