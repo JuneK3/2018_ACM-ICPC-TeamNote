@@ -1,6 +1,8 @@
 // LIS : 최장증가수열
 // O(N^2)
-// O(NlogN)으로 교체가능
+// O(NlogN)으로 교체가능(http://mygumi.tistory.com/303 참고)
+
+// 백준 11053, 11055 참고
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -11,7 +13,7 @@ int main()
 	cin >> n;
 	vector<int> a(n); // 값을 입력받을 배열
     int ans=0;
-    //최장증가수열의 최대길이를 구하는 경우
+    // 최장증가수열의 최대길이를 구하는 경우
 	for(int i=0; i<n; i++)
 	{
 		cin >> a[i];
