@@ -36,11 +36,26 @@
   - MCMF
   
 ### 팀원 공통 공부
+- 자료구조 활용
+  - 우선순위 큐
 - Union-Find
 - DP
+  - LIS
+  - LCS
+  - Edit Distance
+  - Knapsack
+  - TSP
+  - 조합론
+  - 비트마스크
+  - 경로 재구성
+  - 확률/기대값
+  - Knuth Optimization
+  - Divide&Conquer Optimization
+  - Convex Hull Optimization
 - 다양한 기법들
-  - 백트래킹
   - Brute Force
+    - 백트래킹
+    - 비트마스킹
   - Meet in the middle
   - 슬라이딩 윈도우
   - Two Pointer
