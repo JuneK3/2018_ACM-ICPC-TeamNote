@@ -11,8 +11,8 @@ int main()
 {
 	int n;
 	cin >> n;
+    int ans = 0;
 	vector<int> a(n); // 값을 입력받을 배열
-    int ans=0;
     // 최장증가수열의 최대길이를 구하는 경우
 	for(int i=0; i<n; i++)
 	{
@@ -35,7 +35,6 @@ int main()
             ans=d[i];
         }
 	}
-
     /*
     // 최장증가수열의 최대합을 구하는 경우
     for (int i=0; i<n; i++) {
