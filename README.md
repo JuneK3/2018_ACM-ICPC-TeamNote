@@ -54,6 +54,7 @@
   - Convex Hull Optimization
 - 다양한 기법들
   - Brute Force
+    - 
     - 백트래킹
     - 비트마스킹
   - Meet in the middle
