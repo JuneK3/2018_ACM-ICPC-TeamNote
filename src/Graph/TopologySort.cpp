@@ -3,7 +3,7 @@
 #include <queue>
 using namespace std;
 int n; // 정점개수 n
-int inDegree[]; // 각 정점의 inDegree개수를 저장
+int inDegree[]; // 각 정점의 inDegree정점의 개수를 저장
 int result[]; // 정점 저장 
 vector<int> a[]; // 인접리스트를 활용한 BFS를 이용
 
