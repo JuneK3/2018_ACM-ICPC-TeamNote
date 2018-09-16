@@ -8,22 +8,22 @@
 
 ### 작성예정
 - Graph 일반
-  - DFS
-  - BFS
-  - 위상정렬
+  - [x] DFS
+  - [x] BFS
+  - [x] 위상정렬
   - Euler Path/Circuit
   - 강결합(SCC)
   - 이분 그래프
   - 단절점
   - 2-SAT
 - MST
-  - Kruskal
-  - Prim
+  - [x] Kruskal
+  - [x] Prim
 - 최단 경로
-  - Bellman-Ford
-  - Dijkstra
-  - Floyd-Warshall
-  - SPFA
+  - [x] Bellman-Ford
+  - [x] Dijkstra
+  - [x] Floyd-Warshall
+  - [x] SPFA
 - Network Flow
   - 맥시멈 플로우	포드-풀커슨(DFS)
   - 에드몬드-카프(BFS)
@@ -40,7 +40,7 @@
   - 우선순위 큐
 - Union-Find
 - DP
-  - LIS
+  - [x] LIS
   - LCS
   - Edit Distance
   - Knapsack
