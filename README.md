@@ -36,9 +36,9 @@
   - MCMF
   
 ### 팀원 공통 공부
-- 자료구조 활용
-  - 우선순위 큐
-- Union-Find
+- Data Structure
+  - [x] Priority-Queue
+  - Union-Find
 - DP
   - [x] LIS
   - LCS
