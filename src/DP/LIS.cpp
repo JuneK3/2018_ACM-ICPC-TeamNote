@@ -9,7 +9,7 @@ int main()
 {
 	int n;
 	cin >> n;
-    int ans = 0;
+    int ans=0;
 	vector<int> a(n); // 값을 입력받을 배열
     // 최장증가수열의 최대길이를 구하는 경우
 	for(int i=0; i<n; i++)
@@ -52,9 +52,6 @@ int main()
     	}
     }
     */
-    // max_element함수는 배열의 최대값의 이터레이터를 반환하므로 값을 참조하기 위해서는 *를 붙여서 사용
-    // #include <algorithm> 필요
-    // cout << *max_element(d.begin(), d.end()) << '\n'; // 최대길이 or 최대합 출력
     cout << ans << '\n'; // 최대길이 or 최대합 출력
 	return 0;
 }
