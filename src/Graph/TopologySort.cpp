@@ -23,6 +23,7 @@ void topologySort(){
 		result[i]=x; // 방문한 순서대로 현재정점 저장
 		for(int j=0; j<a[x].size(); j++){
 			int y = a[x][j];
+            // y의 inDegree에 해당하는 정점을 방문했으므로 inDegree[y]-=1;
 			//새롭게 진입차수가 0이 된 정점을 큐에 삽입 
 			if(--inDegree[y]==0)
 				q.push(y);
