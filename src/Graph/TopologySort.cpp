@@ -34,7 +34,7 @@ void topologySort(){
 		printf("%d ", result[i]);
 	}
 }
-	
+
 int main(){
 	int m; // 정점간의 간선정보 m개
 	scanf("%d %d", &n, &m);
@@ -43,8 +43,7 @@ int main(){
 		int x, y;
 		scanf("%d %d", &x, &y);
 		a[x].push_back(y);
-		inDegree[y]++; // 정점 y의 inDegree 1증가
+		inDegree[y]++; //정점 x가 정점 y의 inDegree 정점에 해당하므로 1증가
 	}
 	topologySort(); // 위상정렬 실행
 }
-	

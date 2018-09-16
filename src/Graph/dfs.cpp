@@ -27,7 +27,7 @@ void dfs(int node) {
     stack<pair<int,int>> s;
     s.push(make_pair(node,0));
     check[node] = true;
-    // printf("%d ",node);
+    printf("%d ",node); // 방문정점 출력
     while (!s.empty()) {
         int node = s.top().first;
         int start = s.top().second;
