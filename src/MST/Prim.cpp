@@ -53,10 +53,13 @@ struct Edge {
     int start;
     int end;
     int cost;
+    // 모두 0으로 초기화하는 기본 생성자
     Edge() : start(0), end(0), cost(0) {
     }
+    // 입력값을 받는 생성자
     Edge(int start, int end, int cost) : start(start), end(end), cost(cost) {
     }
+    // 연산자 오버로딩
     bool operator < (const Edge &other) const {
         return cost > other.cost;
     }
@@ -64,17 +67,18 @@ struct Edge {
 vector<pair<int,int>> a[];
 bool c[];
 int main() {
-    int n, m;
+    int n, m; // 정점개수 n, 간선정보 개수 m
     scanf("%d",&n);
     scanf("%d",&m);
+    // 간선정보 입력
     for (int i=0; i<m; i++) {
         int start, end, cost;
         scanf("%d %d %d",&start, &end, &cost);
         a[start].push_back(make_pair(end,cost));
         a[end].push_back(make_pair(start,cost));
     }
-    c[1] = true;
-    priority_queue<Edge> q;
+    c[1] = true; // 1번정점부터 BFS시작
+    priority_queue<Edge> q; // 우선순위 큐
     for (int i=0; i<a[1].size(); i++) {
         q.push(Edge(1, a[1][i].first, a[1][i].second));
     }
@@ -85,10 +89,10 @@ int main() {
             e = q.top();
             q.pop();
             if (c[e.end] == false) {
-                break;
+                break; // 방문하지 않은 정점 탐색
             }
         }
-        c[e.end] = true;
+        c[e.end] = true; // 현재 정점 방문체크
         ans += e.cost;
         int x = e.end;
         for (int i=0; i<a[x].size(); i++) {
