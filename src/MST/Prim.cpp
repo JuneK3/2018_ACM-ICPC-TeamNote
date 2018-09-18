@@ -45,7 +45,8 @@ int main() {
 }
 
 // 구조체 및 생성자를 이용한 구현
-#include <cstdio>
+// 연산자 오버로딩을 이용하여 최대힙으로 구현된 우선순위 큐를 최소힙으로 활용
+#include <iostream>
 #include <queue>
 #include <vector>
 using namespace std;
