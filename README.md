@@ -51,7 +51,7 @@
   - Convex hull
   - 가장 인접한 두 점의 거리
   
-### 팀원 공통 공부(팀노트 정리 필수X)
+### 팀원 공통 공부(팀노트 정리 필수X, 계속 수정)
 - Data Structure
   - [x] Priority-Queue
   - [x] Union-Find
