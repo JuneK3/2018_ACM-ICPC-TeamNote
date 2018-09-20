@@ -69,10 +69,8 @@
   - Divide&Conquer Optimization
   - Convex Hull Optimization
 - 다양한 기법들
+  - 백트래킹
   - Brute Force
-    - 순열
-    - 백트래킹
-    - 비트마스킹
   - Meet in the middle
   - 슬라이딩 윈도우
   - Two Pointer
