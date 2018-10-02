@@ -1,0 +1,13 @@
+int getIdx(x) {
+    return lower_bound(idx.begin(), idx.end(), x) - idx.begin();
+}
+
+for (i < N) {
+	cin >> _a
+	idx.push_back(_a)
+}
+
+sort(idx.begin(), idx.end());
+idx.erase(unique(idx.begin(), idx.end()), idx.end());
+
+-> segTree
