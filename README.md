@@ -25,16 +25,16 @@
   - [x] Floyd-Warshall
   - [x] SPFA
 - Network Flow
-  - [x] 포드-풀커슨(DFS)
-  - [x] 에드몬드-카프(BFS)
-  - [x] 이분매칭(심플한 구현)
-  - [x] Hopcroft-Karp
-  - [x] Max-flow Min-cut Theorem
-  - [x] 최소 버텍스 커버
-  - [x] 최대 독립 집합
+  - 포드-풀커슨(DFS)
+  - 에드몬드-카프(BFS)
+  - 이분매칭(심플한 구현)
+  - Hopcroft-Karp
+  - Max-flow Min-cut Theorem
+  - 최소 버텍스 커버
+  - 최대 독립 집합
   - 디닉
 - MCMF
-  - [x] MCMF
+  - MCMF
 - Query
   - Sqrt Decomposition
   - SegmentTree Lazy Propagation
@@ -53,8 +53,8 @@
   
 ### 팀원 공통 공부(팀노트 정리 필수X, 계속 수정)
 - Data Structure
-  - [x] Priority-Queue
-  - [x] Union-Find
+  - Priority-Queue
+  - Union-Find
 - DP
   - LIS
   - LCS
