@@ -80,9 +80,9 @@
 - Data Structure
   - Priority-Queue(stl)
   - Heap
-  - Linked List
-  - Stack
-  - Queue
+  - [x] Linked List
+  - [x] Stack(stl)
+  - Queue(stl)
   - HashTable
   - Vector(stl)
   - Map(stl)
