@@ -80,15 +80,17 @@
 - Data Structure
   - Priority-Queue(stl)
   - Heap
-  - [x] Linked List
+  - [x] Single Linked List
+  - Double Linked List
+  - Circular Linked List
   - [x] Stack(stl)
-  - Queue(stl)
+  - [x] Queue(stl)
   - HashTable
   - Vector(stl)
   - Map(stl)
   - Set(stl)
   - Tree
-    - Tree(not_binary)
+    - Tree(not binary but ordinary_tree)
     - Binary Search Tree
     - Red-Black Tree
     - LCA
