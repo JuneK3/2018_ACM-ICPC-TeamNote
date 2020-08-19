@@ -5,4 +5,5 @@
 *.exe
 *.layout
 *.win
+*.manifest
 test.cpp
