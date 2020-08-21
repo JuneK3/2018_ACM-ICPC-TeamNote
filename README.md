@@ -9,9 +9,9 @@
 
 ### Search
 
-- DFS
-- BFS
-- Binary-Search
+- [DFS](/src/Search/dfs.cpp)
+- [BFS](/src/Search/bfs.cpp)
+- [Binary-Search](/src/Search/bs.cpp)
 
 ### Sorting
 
