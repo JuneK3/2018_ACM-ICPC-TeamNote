@@ -5,12 +5,12 @@
 using namespace std;
 
 vector<int> adj[]; // 인접리스트
-int check[];       // 정점 방문 여부 체크
+bool check[];      // 정점 방문 여부 체크
 
 // 인럽리스트 구현
 void bfs(int start)
 {
-    check[start] = 1;
+    check[start] = true;
     queue<int> q;
     q.push(start);
     cout << start << ' ';
@@ -23,7 +23,7 @@ void bfs(int start)
             int next = adj[cur][i];
             if (check[next])
                 continue;
-            check[next] = 1;
+            check[next] = true;
             q.push(next);
             cout << next << ' ';
         }
@@ -31,12 +31,12 @@ void bfs(int start)
 }
 
 int adj[][]; // 인접행렬
-int check[];
+bool check[];
 
 // 인접 행렬 구현
 void bfs(int start)
 {
-    check[start] = 1;
+    check[start] = true;
     queue<int> q;
     q.push(start);
     cout << start << ' ';
@@ -48,7 +48,7 @@ void bfs(int start)
         {
             if (!check[next] && adj[cur][next] == 1)
             {
-                check[next] = 1;
+                check[next] = true;
                 q.push(next);
                 cout << next << ' ';
             }
@@ -57,8 +57,8 @@ void bfs(int start)
 }
 
 // 격자판 버전
-int board[][]; // 격자판 값 저장
-int check[][]; // 방문여부 체크
+int board[][];  // 격자판 값 저장
+bool check[][]; // 방문여부 체크
 
 int dy[] = {0, 0, 1, -1};
 int dx[] = {1, -1, 0, 0};
@@ -88,7 +88,7 @@ void bfs(int y, int x)
                 continue;
             if (!check[ny][nx] && board[ny][nx] == 1)
             {
-                check[ny][nx] = 1;
+                check[ny][nx] = true;
                 q.push({ny, nx});
             }
         }

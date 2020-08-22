@@ -5,7 +5,7 @@
 using namespace std;
 
 vector<int> adj[]; // 인접리스트
-int check[];       // 방문한 정점 체크
+bool check[];      // 방문한 정점 체크
 
 // 인접리스트 구현
 void dfs(int start)
@@ -22,7 +22,7 @@ void dfs(int start)
 }
 
 int adj[][]; // 인접행렬
-int check[];
+bool check[];
 
 // 인접행렬 구현
 void dfs(int start)
@@ -83,7 +83,7 @@ void dfs(int start)
             if (!check[next] && adj[cur][next] == 1)
             {
                 can_go = true;
-                check[next] = 1;
+                check[next] = true;
                 st.push(next);
                 cout << next << ' ';
                 break;
@@ -98,7 +98,7 @@ void dfs(int start)
 
 // 격자판 버전
 int board[][];
-int check[][];
+bool check[][];
 
 int dy[] = {0, 0, 1, -1};
 int dx[] = {1, -1, 0, 0};
@@ -111,7 +111,7 @@ bool isInRange(int y, int x)
 
 void dfs(int y, int x)
 {
-    check[y][x] = 1;
+    check[y][x] = true;
     for (int i = 0; i < 4; i++)
     {
         int ny = y + dy[i];

@@ -6,4 +6,5 @@
 *.layout
 *.win
 *.manifest
+*.code-workspace
 test.cpp
