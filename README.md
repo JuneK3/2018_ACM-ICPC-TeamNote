@@ -27,7 +27,8 @@
 ### Data Structure
 
 - Linked-list
-- Priority-queue
+- [Priority-queue](/src/priority_queue.cpp)
+- [Max-heap](/src/Max-heap.cpp)
 - Queue
 - Stack
 - Disjoint-Set(Union-Find)
