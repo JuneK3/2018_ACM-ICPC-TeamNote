@@ -46,7 +46,7 @@
 
 ### MST
 
-- [Kruskal](/src/MST/Kruscal.cpp)
+- [Kruskal](/src/MST/Kruskal.cpp)
 - [Prim](/src/MST/Prim.cpp)
 
 ### String
