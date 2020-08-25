@@ -27,27 +27,27 @@
 ### Data Structure
 
 - Linked-list
-- [Priority-queue](/src/priority_queue.cpp)
-- [Max-heap](/src/Max-heap.cpp)
+- [Priority-queue](/src/Data_Structure/priority_queue.cpp)
+- [Max-heap](/src/Data_Structure/Max_heap.cpp)
 - Queue
 - Stack
 - Disjoint-Set(Union-Find)
 
 ### Graph
 
-- [Topology-Sort](/src/TopologySort.cpp)
+- [Topology-Sort](/src/Graph/TopologySort.cpp)
 
 ### Shortest Path
 
-- [Bellman-Ford](/src/Bellman_Ford.cpp)
-- [Dijkstra](/src/Dijkstra.cpp)
-- [Floyd](/src/Floyd.cpp)
-- [SPFA](/src/SPFA.cpp)
+- [Bellman-Ford](/src/Shortest Path/Bellman_Ford.cpp)
+- [Dijkstra](/src/Shortest Path/Dijkstra.cpp)
+- [Floyd](/src/Shortest Path/Floyd.cpp)
+- [SPFA](/src/Shortest Path/SPFA.cpp)
 
 ### MST
 
-- [Kruskal](/src/Kruscal.cpp)
-- [Prim](/src/Prim.cpp)
+- [Kruskal](/src/MST/Kruscal.cpp)
+- [Prim](/src/MST/Prim.cpp)
 
 ### String
 
