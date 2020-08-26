@@ -39,10 +39,10 @@
 
 ### Shortest Path
 
-- [Bellman-Ford](/src/Shortest Path/Bellman_Ford.cpp)
-- [Dijkstra](/src/Shortest Path/Dijkstra.cpp)
-- [Floyd](/src/Shortest Path/Floyd.cpp)
-- [SPFA](/src/Shortest Path/SPFA.cpp)
+- [Bellman-Ford](/src/Shortest_Path/Bellman_Ford.cpp)
+- [Dijkstra](/src/Shortest_Path/Dijkstra.cpp)
+- [Floyd](/src/Shortest_Path/Floyd.cpp)
+- [SPFA](/src/Shortest_Path/SPFA.cpp)
 
 ### MST
 
