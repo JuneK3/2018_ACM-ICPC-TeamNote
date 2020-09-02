@@ -20,7 +20,7 @@
 ### Sorting
 
 - Selection sort
-- Insertion sort
+- [Insertion sort](/src/Sorting/insertion.cpp)
 - Quick sort
 - Merge sort
 - Heap sort
