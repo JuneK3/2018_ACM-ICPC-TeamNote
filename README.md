@@ -87,3 +87,7 @@
     - Red-Black Tree
     - LCA
     - Segment Tree
+
+## Reference
+  - [Python-Competitive-Programming-Team-Notes](https://github.com/ndb796/Python-Competitive-Programming-Team-Notes)
+  - [python-for-coding-test](https://github.com/ndb796/python-for-coding-test)
