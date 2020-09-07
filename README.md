@@ -45,7 +45,7 @@
 - [Treap](/src/Tree/Treap.cpp)
 - LCA
 - Longest Path in Tree
-- Segment Tree
+- [Segment Tree](/src/Tree/segmentTree.cpp)
 
 ### Graph
 
