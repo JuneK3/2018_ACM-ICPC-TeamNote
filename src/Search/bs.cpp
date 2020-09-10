@@ -10,36 +10,36 @@ using namespace std;
 vector<int> arr; // 탐색할 배열
 int lower_bound(int num)
 {
-    int l = 0, r = arr.size();
-    while (l < r)
+  int l = 0, r = arr.size();
+  while (l < r)
+  {
+    int mid = (l + r) / 2;
+    if (arr[mid] < num)
     {
-        int mid = (l + r) / 2;
-        if (arr[mid] < num)
-        {
-            l = mid + 1;
-        }
-        else
-        {
-            r = mid;
-        }
+      l = mid + 1;
     }
-    return r;
+    else
+    {
+      r = mid;
+    }
+  }
+  return r;
 }
 
 int upper_bound(int num)
 {
-    int l = 0, r = arr.size();
-    while (l < r)
+  int l = 0, r = arr.size();
+  while (l < r)
+  {
+    int mid = (l + r) / 2;
+    if (arr[mid] <= num)
     {
-        int mid = (l + r) / 2;
-        if (arr[mid] <= num)
-        {
-            l = mid + 1;
-        }
-        else
-        {
-            r = mid;
-        }
+      l = mid + 1;
     }
-    return r;
+    else
+    {
+      r = mid;
+    }
+  }
+  return r;
 }

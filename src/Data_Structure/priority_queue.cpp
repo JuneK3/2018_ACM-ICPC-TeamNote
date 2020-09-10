@@ -8,10 +8,10 @@ typedef pair<int, int> pii;
 // greater<pii>와 같음
 struct cmp
 {
-    bool operator()(pii a, pii b)
-    {
-        return a > b; // less<pii>는 return a < b;
-    }
+  bool operator()(pii a, pii b)
+  {
+    return a > b; // less<pii>는 return a < b;
+  }
 };
 
 // 첫번째 인자는 저장할 원소의 자료형을 나타내고

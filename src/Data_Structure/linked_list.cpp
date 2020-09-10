@@ -3,37 +3,46 @@
 using namespace std;
 
 template <typename T>
-class Node{
+class Node
+{
 public:
   T data;
-  Node* next;
-  Node(){}
-  Node(T data) : data(data){
+  Node *next;
+  Node() {}
+  Node(T data) : data(data)
+  {
     next = nullptr;
   }
-  ~Node(){}
+  ~Node() {}
 };
 
 template <typename T>
-class LinkedList{
+class LinkedList
+{
 public:
-  Node<T>* head;
+  Node<T> *head;
   int size;
-  LinkedList(){
+  LinkedList()
+  {
     size = 0;
     head = nullptr;
   }
 
-  void addNode(T data){
+  void addNode(T data)
+  {
     Node<T> *newNode = new Node<T>(data);
     size++;
-    if(head == nullptr){
+    if (head == nullptr)
+    {
       head = newNode;
     }
-    else{
+    else
+    {
       Node<T> *cur = head;
-      while(cur){
-        if(cur->next == nullptr){
+      while (cur)
+      {
+        if (cur->next == nullptr)
+        {
           cur->next = newNode;
           break;
         }
@@ -42,13 +51,16 @@ public:
     }
   }
 
-  void printList(){
-    if(head == nullptr){
+  void printList()
+  {
+    if (head == nullptr)
+    {
       cout << "빈 리스트" << '\n';
       return;
     }
     Node<T> *cur = head;
-    while(cur){
+    while (cur)
+    {
       cout << cur->data << " ";
       cur = cur->next;
     }
@@ -57,41 +69,49 @@ public:
     return;
   }
 
-  void chaneNode(int idx, T data){
-    if(idx < 0 || idx >= size){
+  void chaneNode(int idx, T data)
+  {
+    if (idx < 0 || idx >= size)
+    {
       cout << "잘못된 인덱스 참조" << '\n';
       return;
     }
     Node<T> *cur = head;
-    for(int i=0; i<idx; i++){
+    for (int i = 0; i < idx; i++)
+    {
       cur = cur->next;
     }
     cur->data = data;
     return;
   }
 
-  void deleteNode(int idx){
-    if(idx < 0 || idx >= size){
+  void deleteNode(int idx)
+  {
+    if (idx < 0 || idx >= size)
+    {
       cout << "잘못된 인덱스 참조" << '\n';
       return;
     }
     Node<T> *cur = head;
     Node<T> *pre = nullptr;
-    for(int i=0; i<idx; i++){
+    for (int i = 0; i < idx; i++)
+    {
       pre = cur;
       cur = cur->next;
     }
     size--;
-    if(idx == 0) head = head->next;
-    else pre->next = cur->next;
-      
+    if (idx == 0)
+      head = head->next;
+    else
+      pre->next = cur->next;
+
     delete cur;
     return;
   }
-
 };
 
-int main(){
+int main()
+{
   LinkedList<int> List;
   List.addNode(1);
   List.addNode(3);

@@ -4,34 +4,40 @@
 using namespace std;
 
 template <typename T>
-class Queue{
+class Queue
+{
 public:
-  struct Node{
+  struct Node
+  {
     T val;
     Node *next;
-    Node() : next(nullptr){}
-		Node(T val) : val(val), next(nullptr){}
+    Node() : next(nullptr) {}
+    Node(T val) : val(val), next(nullptr) {}
   };
 
   Node *Front;
   Node *Rear;
   int _size;
-  Queue(): _size(0), Front(nullptr), Rear(nullptr){}
+  Queue() : _size(0), Front(nullptr), Rear(nullptr) {}
 
-  void push(T val){
+  void push(T val)
+  {
     Node *newNode = new Node(val);
     _size++;
 
-    if(Front == nullptr){
+    if (Front == nullptr)
+    {
       Front = Rear = newNode;
     }
-    else{
+    else
+    {
       Rear->next = newNode;
       Rear = newNode;
     }
   }
 
-  void pop(){
+  void pop()
+  {
     //if(_size == 0) return;
     _size--;
     Node *temp = Front;
@@ -39,27 +45,31 @@ public:
     delete temp;
   }
 
-  bool empty(){
+  bool empty()
+  {
     return _size == 0;
   }
 
-  T front(){
+  T front()
+  {
     return Front->val;
   }
 
-  int size(){
+  int size()
+  {
     return _size;
   }
-
 };
 
-int main(){
+int main()
+{
   Queue<int> q;
   q.push(1);
   q.push(3);
   q.push(5);
   int len = q.size();
-  for(int i=0; i<len; i++){
+  for (int i = 0; i < len; i++)
+  {
     cout << q.front() << '\n';
     q.pop();
   }
