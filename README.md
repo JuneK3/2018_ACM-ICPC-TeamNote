@@ -1,6 +1,8 @@
 ## INTRO
 
 - 대회 및 코딩테스트 준비
+- 코딩테스트에서 c++을 지원하지 않는 상황에 대비해서 python이나 js로도 연습해함
+- 일단은 python을 보조언어로 선택
 - 작성할 소스코드는 src/에 알고리즘별로 분류해서 저장
 - 팀노트로 활용하기 위해 지속적인 수정 필요 (더 좋은 코드로 교체)
 - 삼성 sw역량테스트 B형 준비 : STL 직접 구현 필요
@@ -45,7 +47,6 @@
 - Longest Path in Tree
 - Segment Tree
 
-
 ### Graph
 
 - [Topology-Sort](/src/Graph/TopologySort.cpp)
@@ -64,8 +65,9 @@
 
 ### String
 
-- Rabin-Karp
 - [KMP](/src/String/kmp.cpp)
+- Rabin-Karp
+- [Suffix-Array](/src/String/suffixArray.cpp)
 - Trie
 
 ## B형 응시를 위한 STL 구현(예정)
@@ -89,5 +91,6 @@
     - Segment Tree
 
 ## Reference
-  - [Python-Competitive-Programming-Team-Notes](https://github.com/ndb796/Python-Competitive-Programming-Team-Notes)
-  - [python-for-coding-test](https://github.com/ndb796/python-for-coding-test)
+
+- [Python-Competitive-Programming-Team-Notes](https://github.com/ndb796/Python-Competitive-Programming-Team-Notes)
+- [python-for-coding-test](https://github.com/ndb796/python-for-coding-test)
