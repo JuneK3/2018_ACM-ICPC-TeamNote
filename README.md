@@ -15,6 +15,7 @@
 
 ### Search
 
+- [Permutaion](/src/Search/permutation.cpp)
 - [Combination](/src/Search/combination.cpp)
 - [DFS](/src/Search/dfs.cpp)
 - [BFS](/src/Search/bfs.cpp)
