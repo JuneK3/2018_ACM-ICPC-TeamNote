@@ -26,7 +26,7 @@
 - Selection sort
 - [Insertion sort](/src/Sorting/insertion.cpp)
 - Quick sort
-- Merge sort
+- [Merge sort](/src/Sorting/merge.cpp)
 - Heap sort
 - Counting sort
 - Radix sort
