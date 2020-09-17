@@ -48,6 +48,7 @@
 - LCA
 - Longest Path in Tree
 - [Segment Tree](/src/Tree/segmentTree.cpp)
+- [Fenwick Tree](/src/Tree/fenwickTree.cpp)
 
 ### Graph
 
