@@ -23,9 +23,9 @@
 
 ### Sorting
 
-- Selection sort
+- [Selection sort](/src/Sorting/selection.cpp)
 - [Insertion sort](/src/Sorting/insertion.cpp)
-- Quick sort
+- [Quick sort](/src/Sorting/quick.cpp)
 - [Merge sort](/src/Sorting/merge.cpp)
 - Heap sort
 - Counting sort
