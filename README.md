@@ -28,7 +28,7 @@
 - [Quick sort](/src/Sorting/quick.cpp)
 - [Merge sort](/src/Sorting/merge.cpp)
 - Heap sort
-- Counting sort
+- [Counting sort](/src/Sorting/counting.cpp)
 - Radix sort
 - Sort(stl)
 
