@@ -7,6 +7,10 @@
 
 ## Contents
 
+### Implement
+
+- Rotate Matrix by 90 degree
+
 ### Search
 
 - [DFS](/src/Search/dfs.cpp)
@@ -26,12 +30,21 @@
 
 ### Data Structure
 
+- HashTable with STL
 - Linked-list
 - [Priority-queue](/src/Data_Structure/priority_queue.cpp)
 - [Max-heap](/src/Data_Structure/Max_heap.cpp)
 - Queue
 - Stack
 - Disjoint-Set(Union-Find)
+
+### Tree
+
+- [Treap](/src/Tree/Treap.cpp)
+- LCA
+- Longest Path in Tree
+- Segment Tree
+
 
 ### Graph
 
