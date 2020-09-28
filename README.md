@@ -65,7 +65,7 @@
 ### String
 
 - Rabin-Karp
-- KMP
+- [KMP](/src/String/kmp.cpp)
 - Trie
 
 ## B형 응시를 위한 STL 구현(예정)
