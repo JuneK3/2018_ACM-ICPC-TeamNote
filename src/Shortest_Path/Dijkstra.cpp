@@ -1,180 +1,76 @@
-// 시간복잡도 인접행렬, 인접리스트 모두 O(V^2)
-// 힙을 이용하여 최소값을 찾는다면 O(ElogE)
+#include <bits/stdc++.h>
+const int INF = 1e9; // 무한을 의미하는 값으로 10억을 설정
+const int MAX = 100001;
 
-/*
-// 인접 행렬
-#include <iostream>
 using namespace std;
-int a[][];
-int dist[];
-bool check[];
-int inf = 1000000000;
-int main() {
-    int n;
-    scanf("%d",&n);
-    for (int i=1; i<=n; i++) {
-        for (int j=1; j<=n; j++) {
-            a[i][j] = inf;
-        }
-    }
-    int m;
-    scanf("%d",&m);
-    for (int i=0; i<m; i++) {
-        int x,y,z;
-        scanf("%d %d %d",&x,&y,&z);
-        if (a[x][y] > z) {
-            a[x][y] = z;
-        }
-    }
-    int start, end;
-    scanf("%d %d",&start,&end);
-    for (int i=1; i<=n; i++) {
-        dist[i] = inf;
-    }
-    dist[start] = 0;
-    for (int k=0; k<n-1; k++) {
-        int m = inf+1;
-        int x = -1;
-        for (int i=1; i<=n; i++) {
-            if (check[i] == false && m > dist[i]) {
-                m = dist[i];
-                x = i;
-            }
-        }
-        check[x] = true;
-        for (int i=1; i<=n; i++) {
-            if (dist[i] > dist[x] + a[x][i]) {
-                dist[i] = dist[x] + a[x][i];
-            }
-        }
-    }
-    printf("%d\n",dist[end]);
-    return 0;
-}
-*/
 
-// 인접 리스트
-#include <iostream>
-#include <vector>
-using namespace std;
-struct Edge {
-    int to;
-    int cost;
-    Edge(int to, int cost) : to(to), cost(cost) {
+// 노드의 개수(N), 간선의 개수(M), 시작 노드 번호(Start)
+// 노드의 개수는 최대 100,000개라고 가정
+int n, m, start;
+// 각 노드에 연결되어 있는 노드에 대한 정보를 담는 인접리스트
+vector<pair<int, int>> graph[MAX];
+// 최단 거리 테이블 만들기
+int d[MAX];
+
+// 우선순위 큐(최소힙)을 활용한 구현
+// 시간복잡도 O(ElogE) <= O(Elog(V^2)) = O(ElogV)
+void dijkstra(int start)
+{
+  priority_queue<pair<int, int>> pq;
+  // 시작 노드로 가기 위한 최단 경로는 0으로 설정하여, 큐에 삽입
+  pq.push({0, start});
+  d[start] = 0;
+  while (!pq.empty())
+  { // 큐가 비어있지 않다면
+    // 가장 최단 거리가 짧은 노드에 대한 정보 꺼내기
+    int dist = -pq.top().first; // 현재 노드까지의 비용
+    int now = pq.top().second;  // 현재 노드
+    pq.pop();
+    // 현재 노드가 이미 처리된 적이 있는 노드라면 무시
+    if (d[now] < dist)
+      continue;
+    // 현재 노드와 연결된 다른 인접한 노드들을 확인
+    for (int i = 0; i < graph[now].size(); i++)
+    {
+      int next = graph[now][i].first;
+      int cost = dist + graph[now][i].second;
+      // 현재 노드를 거쳐서, 다른 노드로 이동하는 거리가 더 짧은 경우
+      if (cost < d[next])
+      {
+        d[next] = cost;
+        pq.push(make_pair(-cost, next));
+      }
     }
-};
-vector<Edge> a[];
-int dist[]; // 시작점에서 i까지의 최단경로 저장
-bool check[]; // 방문여부 체크
-int inf = 1000000000;
-int main() {
-    int n; // 정점개수
-    scanf("%d",&n);
-    int m; // 간선 정보 개수
-    scanf("%d",&m);
-    // 시작정점, 도착정점, 가중치 입력
-    for (int i=0; i<m; i++) {
-        int x,y,z;
-        scanf("%d %d %d",&x,&y,&z);
-        a[x].push_back(Edge(y,z));
-    }
-    // 시작점, 도착점 입력
-    int start, end;
-    scanf("%d %d",&start,&end);
-    // 벨만포드와 마찬가지로 처음에는 모두 무한대로 저장
-    for (int i=1; i<=n; i++) {
-        dist[i] = inf;
-    }
-    dist[start] = 0; // 시작점 최단경로 0으로 설정
-    // 이 부분 암기필요
-    for (int k=0; k<n-1; k++) {
-        int m = inf+1;
-        int x = -1;
-        // 최단경로가 최소인 정점부터 다시 시작
-        for (int i=1; i<=n; i++) {
-            if (check[i] == false && m > dist[i]) {
-                m = dist[i];
-                x = i; // 최단경로가 최소인 정점번호 저장
-            }
-        }
-        check[x] = true; // 방문 체크
-        for (int i=0; i<a[x].size(); i++) {
-            int y = a[x][i].to;
-            // 최단경로 갱신
-            if (dist[y] > dist[x] + a[x][i].cost) {
-                dist[y] = dist[x] + a[x][i].cost;
-            }
-        }
-    }
-    // 도착점까지의 최단경로 출력
-    printf("%d\n",dist[end]);
-    return 0;
-}
-// 힙을 활용한 구현 O(ElogE)
-#include <iostream>
-#include <vector>
-#include <queue>
-using namespace std;
-struct Edge {
-    int to;
-    int cost;
-    Edge(int to, int cost) : to(to), cost(cost) {
-    }
-};
-vector<Edge> a[];
-int dist[];
-bool check[];
-int inf = 1000000000;
-int main() {
-    int n,m;
-    scanf("%d %d",&n,&m);
-    int start;
-    scanf("%d",&start);
-    for (int i=0; i<m; i++) {
-        int x,y,z;
-        scanf("%d %d %d",&x,&y,&z);
-        a[x].push_back(Edge(y,z));
-    }
-    for (int i=1; i<=n; i++) {
-        dist[i] = inf;
-    }
-    dist[start] = 0;
-    // 이 부분부터 보면
-    // 체크되어 있지 않은 정점중에서 최단거리의 값이 가장 작은 정점을 선택하는 과정을
-    // 우선순위 큐를 이용하여 구현
-    priority_queue<pair<int,int>> q;
-    q.push(make_pair(0, start)); // 시작점을 큐에 push
-    while (!q.empty()) {
-        auto p = q.top();
-        q.pop();
-        int x = p.second; // 정점번호 저장
-        // 이미 방문한 정점이면 pass
-        if (check[x]) {
-            continue;
-        }
-        check[x] = true; // 방문하지 않은 정점이면 방문 체크
-        for (int i=0; i<a[x].size(); i++) {
-            int y = a[x][i].to; // 다음 정점번호 저장
-            // 최단경로 갱신
-            if (dist[y] > dist[x] + a[x][i].cost) {
-                dist[y] = dist[x] + a[x][i].cost;
-                q.push(make_pair(-dist[y], y)); // 최소힙으로 활용하기 위해서 가중치에 음부호를 붙여서 큐에 push
-            }
-        }
-    }
-    // 출력 조건에 맞춰서 출력
-    // case by case
-    /*
-    for (int i=1; i<=n; i++) {
-        if (dist[i] >= inf) {
-            printf("INF\n");
-        } else {
-            printf("%d\n",dist[i]);
-        }
-    }
-    */
-    return 0;
+  }
 }
 
-// DFS를 장착한 다익스트라 알고리즘 구현
-// 추후 추가
+int main(void)
+{
+  cin >> n >> m >> start;
+  // 모든 간선 정보를 입력받기
+  for (int i = 0; i < m; i++)
+  {
+    int a, b, c;
+    cin >> a >> b >> c;
+    // a번 노드에서 b번 노드로 가는 비용이 c라는 의미
+    graph[a].push_back({b, c});
+  }
+  // 최단 거리 테이블을 모두 무한으로 초기화
+  fill(d, d + MAX, INF);
+  // 다익스트라 알고리즘을 수행
+  dijkstra(start);
+  // 모든 노드로 가기 위한 최단 거리를 출력
+  for (int i = 1; i <= n; i++)
+  {
+    // 도달할 수 없는 경우, 무한(INFINITY)이라고 출력
+    if (d[i] == INF)
+    {
+      cout << "INFINITY" << '\n';
+    }
+    // 도달할 수 있는 경우 거리를 출력
+    else
+    {
+      cout << d[i] << '\n';
+    }
+  }
+}
