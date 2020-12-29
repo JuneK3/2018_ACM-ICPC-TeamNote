@@ -30,7 +30,6 @@
 - Heap sort
 - [Counting sort](/src/Sorting/counting.cpp)
 - Radix sort
-- Sort(stl)
 
 ### Data Structure
 
@@ -43,7 +42,7 @@
 - [Disjoint-Set(Union-Find)](/src/Data_Structure/Union-Find.cpp)
 
 ### DP
-- [LIS(nlogn)]()
+- [LIS(nlogn)](/src/DP/lis.cpp)
 
 ### Tree
 
@@ -72,8 +71,8 @@
 ### String
 
 - [KMP](/src/String/kmp.cpp)
-- Rabin-Karp
 - [Suffix-Array](/src/String/suffixArray.cpp)
+- Rabin-Karp
 - Trie
 
 ## B형 응시를 위한 STL 구현(예정)

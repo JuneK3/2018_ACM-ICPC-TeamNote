@@ -7,12 +7,28 @@ vector<vector<int>> rotate_Matrix(vector<vector<int>> a)
 {
   int n = a.size();                              // 행 길이 계산
   int m = a[0].size();                           // 열 길이 계산
-  vector<vector<int>> result(n, vector<int>(m)); // 결과 리스트
+  vector<vector<int>> result(m, vector<int>(n)); // 결과 리스트
   for (int i = 0; i < n; i++)
   {
     for (int j = 0; j < m; j++)
     {
       result[j][n - i - 1] = a[i][j];
+    }
+  }
+  return result;
+}
+
+// 배열을 반시계방향으로 90도 회전
+vector<vector<int>> rotate_Matrix2(vector<vector<int>> a)
+{
+  int n = a.size();
+  int m = a[0].size();
+  vector<vector<int>> result(m, vector<int>(n));
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < m; j++)
+    {
+      result[m - j - 1][i] = a[i][j];
     }
   }
   return result;
