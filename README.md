@@ -34,7 +34,7 @@
 
 ### Data Structure
 
-- HashTable with STL
+- [HashTable based on list](/src/Data_Structure/hash_table.cpp)
 - [Linked-list(single)](/src/Data_Structure/linked_list.cpp)
 - [Priority-queue](/src/Data_Structure/priority_queue.cpp)
 - [Max-heap](/src/Data_Structure/Max_heap.cpp)
