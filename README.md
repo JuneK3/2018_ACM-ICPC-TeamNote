@@ -12,7 +12,7 @@
 ### Implement
 
 - [Rotate Matrix by 90 degree](/src/implement/rotate_matrix.cpp)
-- [Sieve of Eratosthenes](/src/Implement/eratosthenes.cpp)
+- [Sieve of Eratosthenes](/src/implement/eratosthenes.cpp)
 
 ### Search
 
